@@ -1,0 +1,16 @@
+{
+  "name": "Basir Ahmed — Applied AI Architect",
+  "short_name": "Basir Ahmed",
+  "description": "Applied AI Architect & AWS Solution Architect portfolio",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "/images/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

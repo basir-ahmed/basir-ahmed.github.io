@@ -11,9 +11,13 @@ This is a GitHub Pages personal profile website for Basir Ahmed (`basir-ahmed.gi
 ```
 index.html              — Main HTML (single-page, all sections)
 css/styles.css          — All styles (CSS custom properties, responsive, dark/light theme)
-js/main.js              — Theme toggle, mobile menu, navbar scroll, scroll-reveal animations
-images/Basir_photo.jpg  — Profile photo (referenced as ./images/Basir_photo.jpg)
-data/CV_Basir_Ahmed.pdf — Resume PDF (git-ignored; not currently linked in the site)
+js/main.js              — Theme toggle, mobile menu, navbar scroll, scroll-reveal, active nav, back-to-top
+images/profile_photo.jpeg — Profile photo
+images/favicon.svg      — SVG favicon (initials "BA" in brand blue)
+images/og-image.svg     — Open Graph social card template (needs PNG conversion for production)
+404.html                — Custom 404 error page
+manifest.json           — PWA manifest
+data/CV_Basir_Ahmed.pdf — Resume PDF (git-ignored; not linked in the site)
 .gitignore              — Ignores /data/* and /*.ps1
 ```
 
@@ -31,18 +35,24 @@ Then visit `http://localhost:8080`.
 
 - **No build toolchain** — plain HTML/CSS/JS, Google Fonts loaded via CDN (Inter).
 - **Dark/light mode** — CSS custom properties (`--color-*`) switched by `data-theme="light|dark"` on `<html>`. Defaults to system preference via `prefers-color-scheme`; manual toggle persists to `localStorage`.
-- **Responsive** — mobile-first breakpoints at 480px and 900px. Hamburger menu on mobile.
-- **Scroll animations** — elements with class `.reveal` fade in via `IntersectionObserver` (adds `.visible`).
-- **Navbar** — fixed, adds `.scrolled` class on scroll > 50px for shadow effect.
+- **Responsive** — mobile-first breakpoints at 480px and 900px. Hamburger menu on mobile with slide transition.
+- **Scroll animations** — elements with class `.reveal` fade in via `IntersectionObserver` (adds `.visible`), then unobserved for performance.
+- **Navbar** — fixed with glassmorphism (semi-transparent + backdrop-filter), adds `.scrolled` class on scroll > 50px for shadow effect. Active nav link highlighted based on scroll position.
+- **Accessibility** — `:focus-visible` styles, `prefers-reduced-motion` support, skip-to-content link, `<main>` landmark, `aria-expanded` on mobile menu, `aria-hidden` on decorative icons, proper heading hierarchy (h1 > h2 > h3), touch targets >= 44px.
+- **SEO** — Open Graph + Twitter Card meta tags, JSON-LD structured data (Person schema), canonical URL, theme-color.
+- **Performance** — passive scroll listeners, specific CSS transitions (not `all`), hover guards (`@media (hover: hover)`) to prevent sticky hover on touch devices.
+- **Print styles** — `@media print` hides UI chrome and normalizes colors.
 
 ## Current Site Sections
 
-1. **Hero** — photo, name, tagline ("Applied AI Architect & AWS Solution Architect"), summary, badge pills, CTA buttons
+1. **Hero** — photo, name, tagline ("Applied AI Architect & AWS Solution Architect"), summary, badge pills, CTA buttons (Get in Touch, LinkedIn)
 2. **Skills** — 6 cards: AI Architecture & Agentic AI, AWS Cloud, Languages & Frameworks, DevOps & IaC, Data & Middleware, Architecture
-3. **Career** — vertical timeline (TCS, netGuru, Karshan)
-4. **Certifications** — grid of cert cards (Claude Certified Architect CCAR-F, AWS SA, AWS AI Practitioner, Azure Fundamentals, OCJP, PSM I)
-5. **Education** — two cards (ME Jadavpur University, B.Tech RCCIT)
-6. **Contact** — email, LinkedIn, phone
+3. **Projects** — 6 project cards with title, client, description, and tech tags
+4. **Career** — vertical timeline (TCS, netGuru, Karshan)
+5. **Certifications** — grid of cert cards (Claude Certified Architect CCAR-F, AWS SA, AWS AI Practitioner, Azure Fundamentals, OCJP, PSM I)
+6. **Education** — two cards (ME Jadavpur University, B.Tech RCCIT)
+7. **Contact** — email, LinkedIn, phone
+8. **Back-to-top** — fixed button appears after 300px scroll
 
 ---
 
@@ -53,7 +63,7 @@ Then visit `http://localhost:8080`.
 - **Email:** career.basir81@gmail.com
 - **Mobile:** +91 9836835357
 - **LinkedIn:** https://www.linkedin.com/in/basir-ahmed
-- **Photo:** `images/Basir_photo.jpg`
+- **Photo:** `images/profile_photo.jpeg`
 
 ### Summary
 
@@ -131,8 +141,10 @@ Then visit `http://localhost:8080`.
 ## Website Design Goals
 
 - **Dark / light mode toggle** — CSS custom properties switched by `data-theme` on `<html>`. Default to system preference, manual toggle persists to localStorage.
-- Sections currently implemented: **Hero**, **Skills**, **Career**, **Certifications**, **Education**, **Contact**.
-- Sections not yet added: **Projects**, **Awards**, **Downloadable Resume button**.
-- Photo at `./images/Basir_photo.jpg`, CV at `./data/CV_Basir_Ahmed.pdf`.
+- Sections currently implemented: **Hero**, **Skills**, **Projects**, **Career**, **Certifications**, **Education**, **Contact**.
+- Sections not yet added: **Awards**, **Testimonials/Recommendations**.
+- Photo at `./images/profile_photo.jpeg`, CV at `./data/CV_Basir_Ahmed.pdf` (git-ignored, not served).
 - Smooth scroll, scroll-reveal animations, responsive (mobile-first with breakpoints at 480px and 900px).
 - Font: Inter (Google Fonts CDN).
+- PWA manifest for "Add to Home Screen" on mobile.
+- Custom 404 page.

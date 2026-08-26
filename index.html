@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en" dir="ltr" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,6 +8,29 @@
       name="description"
       content="Basir Ahmed — Applied AI Architect & AWS Solution Architect. Designing enterprise-grade LLM solutions, agentic workflows, and scalable AI on AWS."
     />
+    <meta name="author" content="Basir Ahmed" />
+    <meta name="theme-color" content="#2563eb" />
+    <link rel="canonical" href="https://basir-ahmed.github.io/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Basir Ahmed — Applied AI Architect" />
+    <meta property="og:description" content="Applied AI Architect & AWS Solution Architect. Designing enterprise-grade LLM solutions, agentic workflows, and scalable AI on AWS." />
+    <meta property="og:url" content="https://basir-ahmed.github.io/" />
+    <meta property="og:image" content="https://basir-ahmed.github.io/images/og-image.png" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Basir Ahmed — Applied AI Architect" />
+    <meta name="twitter:description" content="Applied AI Architect & AWS Solution Architect. Designing enterprise-grade LLM solutions, agentic workflows, and scalable AI on AWS." />
+    <meta name="twitter:image" content="https://basir-ahmed.github.io/images/og-image.png" />
+
+    <!-- Favicon & Manifest -->
+    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./images/apple-touch-icon.png" />
+    <link rel="manifest" href="./manifest.json" />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,306 +38,419 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/styles.css" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Basir Ahmed",
+      "jobTitle": "Applied AI Architect",
+      "url": "https://basir-ahmed.github.io",
+      "sameAs": ["https://www.linkedin.com/in/basir-ahmed"],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Tata Consultancy Services"
+      },
+      "knowsAbout": ["AI Architecture", "AWS Cloud", "LLM Solutions", "Agentic Workflows", "RAG Systems"]
+    }
+    </script>
   </head>
   <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- Navigation -->
-    <nav class="navbar" id="navbar">
+    <nav class="navbar" id="navbar" aria-label="Main navigation">
       <div class="nav-container">
-        <a href="#" class="nav-logo">Basir Ahmed</a>
+        <a href="#" class="nav-logo" aria-label="Home">Basir Ahmed</a>
         <ul class="nav-links" id="navLinks">
           <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
           <li><a href="#career">Career</a></li>
           <li><a href="#certifications">Certifications</a></li>
           <li><a href="#education">Education</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-        <div style="display: flex; align-items: center; gap: 12px">
+        <div class="nav-actions">
           <button
             class="theme-toggle"
             id="themeToggle"
             aria-label="Toggle theme"
           >
-            <span id="themeIcon">&#9790;</span>
+            <span id="themeIcon" aria-hidden="true">&#9790;</span>
           </button>
-          <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+          <button
+            class="mobile-menu-btn"
+            id="mobileMenuBtn"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            aria-controls="navLinks"
+          >
             <span></span><span></span><span></span>
           </button>
         </div>
       </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-      <div class="hero-content">
-        <div class="hero-text">
-          <h1>Basir Ahmed</h1>
-          <p class="tagline">
-            Applied AI Architect &amp; AWS Solution Architect
-          </p>
-          <p class="summary">
-            I design enterprise-grade LLM solutions, agentic workflows, and RAG
-            systems. 21 years building cloud-native platforms — now helping
-            organisations adopt Generative AI at scale on AWS.
-          </p>
-          <div class="hero-badges">
-            <span class="hero-badge">Claude Certified Architect</span>
-            <span class="hero-badge">AWS Solutions Architect</span>
-            <span class="hero-badge">AWS AI Practitioner</span>
+    <main id="main-content">
+      <!-- Hero Section -->
+      <section class="hero" id="hero">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Basir Ahmed</h1>
+            <p class="tagline">
+              Applied AI Architect &amp; AWS Solution Architect
+            </p>
+            <p class="summary">
+              I design enterprise-grade LLM solutions, agentic workflows, and RAG
+              systems. 21 years building cloud-native platforms — now helping
+              organisations adopt Generative AI at scale on AWS.
+            </p>
+            <div class="hero-badges">
+              <span class="hero-badge">Claude Certified Architect</span>
+              <span class="hero-badge">AWS Solutions Architect</span>
+              <span class="hero-badge">AWS AI Practitioner</span>
+            </div>
+            <div class="hero-buttons">
+              <a href="#contact" class="btn btn-primary">Get in Touch</a>
+              <a
+                href="https://www.linkedin.com/in/basir-ahmed"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-outline"
+                >LinkedIn</a
+              >
+            </div>
           </div>
-          <div class="hero-buttons">
-            <a href="#contact" class="btn btn-primary">Get in Touch</a>
-            <a
-              href="https://www.linkedin.com/in/basir-ahmed"
-              target="_blank"
-              rel="noopener"
-              class="btn btn-outline"
-              >LinkedIn</a
-            >
+          <div class="hero-image">
+            <div class="photo-wrapper">
+              <img
+                src="./images/profile_photo.jpeg"
+                alt="Portrait of Basir Ahmed"
+                class="profile-photo"
+                width="240"
+                height="240"
+              />
+            </div>
+            <p class="hero-location">Kolkata, India &bull; TCS</p>
           </div>
         </div>
-        <div class="hero-image">
-          <div class="photo-wrapper">
-            <img
-              src="./images/profile_photo.jpeg"
-              alt="Basir Ahmed"
-              class="profile-photo"
-            />
-          </div>
-          <p class="hero-location">Kolkata, India &bull; TCS</p>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Skills Section -->
-    <section class="section" id="skills">
-      <div class="container">
-        <div class="section-header reveal">
-          <h2>Technical Expertise</h2>
-          <div class="divider"></div>
+      <!-- Skills Section -->
+      <section class="section" id="skills">
+        <div class="container">
+          <div class="section-header reveal">
+            <h2>Technical Expertise</h2>
+            <div class="divider" aria-hidden="true"></div>
+          </div>
+          <div class="skills-grid">
+            <div class="skill-card reveal">
+              <div class="skill-card-icon" aria-hidden="true">&#129302;</div>
+              <h3>AI Architecture &amp; Agentic AI</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">AI Solution Design</span>
+                <span class="skill-tag">RAG Pipelines</span>
+                <span class="skill-tag">Prompt Engineering</span>
+                <span class="skill-tag">Multi-agent Systems</span>
+                <span class="skill-tag">AI Orchestration</span>
+                <span class="skill-tag">Agent Protocols</span>
+                <span class="skill-tag">Claude / Bedrock</span>
+                <span class="skill-tag">AI Guardrails</span>
+              </div>
+            </div>
+            <div class="skill-card reveal">
+              <div class="skill-card-icon" aria-hidden="true">&#9729;</div>
+              <h3>AWS Cloud</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Lambda</span>
+                <span class="skill-tag">ECS/Fargate</span>
+                <span class="skill-tag">S3</span>
+                <span class="skill-tag">RDS/Aurora</span>
+                <span class="skill-tag">API Gateway</span>
+                <span class="skill-tag">SQS/SNS</span>
+                <span class="skill-tag">EventBridge</span>
+                <span class="skill-tag">Batch</span>
+                <span class="skill-tag">Athena</span>
+                <span class="skill-tag">Kinesis</span>
+              </div>
+            </div>
+            <div class="skill-card reveal">
+              <div class="skill-card-icon" aria-hidden="true">&#128187;</div>
+              <h3>Languages &amp; Frameworks</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Go</span>
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">Spring Boot</span>
+                <span class="skill-tag">React JS</span>
+                <span class="skill-tag">HTML5</span>
+              </div>
+            </div>
+            <div class="skill-card reveal">
+              <div class="skill-card-icon" aria-hidden="true">&#9881;</div>
+              <h3>DevOps &amp; IaC</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Terraform</span>
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">GitLab CI/CD</span>
+                <span class="skill-tag">Git</span>
+              </div>
+            </div>
+            <div class="skill-card reveal">
+              <div class="skill-card-icon" aria-hidden="true">&#128450;</div>
+              <h3>Data &amp; Middleware</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Oracle</span>
+                <span class="skill-tag">MySQL</span>
+                <span class="skill-tag">Aurora</span>
+                <span class="skill-tag">Hibernate/JPA</span>
+                <span class="skill-tag">MuleSoft</span>
+                <span class="skill-tag">IBM MQ</span>
+              </div>
+            </div>
+            <div class="skill-card reveal">
+              <div class="skill-card-icon" aria-hidden="true">&#128274;</div>
+              <h3>Architecture</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Solution Design</span>
+                <span class="skill-tag">Microservices</span>
+                <span class="skill-tag">REST APIs</span>
+                <span class="skill-tag">Multi-tenancy</span>
+                <span class="skill-tag">Agile/Scrum</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="skills-grid">
-          <div class="skill-card reveal">
-            <div class="skill-card-icon">&#129302;</div>
-            <h3>AI Architecture &amp; Agentic AI</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">AI Solution Design</span>
-              <span class="skill-tag">RAG Pipelines</span>
-              <span class="skill-tag">Prompt Engineering</span>
-              <span class="skill-tag">Multi-agent Systems</span>
-              <span class="skill-tag">AI Orchestration</span>
-              <span class="skill-tag">Agent Protocols</span>
-              <span class="skill-tag">Claude / Bedrock</span>
-              <span class="skill-tag">AI Guardrails</span>
-            </div>
-          </div>
-          <div class="skill-card reveal">
-            <div class="skill-card-icon">&#9729;</div>
-            <h3>AWS Cloud</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">Lambda</span>
-              <span class="skill-tag">ECS/Fargate</span>
-              <span class="skill-tag">S3</span>
-              <span class="skill-tag">RDS/Aurora</span>
-              <span class="skill-tag">API Gateway</span>
-              <span class="skill-tag">SQS/SNS</span>
-              <span class="skill-tag">EventBridge</span>
-              <span class="skill-tag">Batch</span>
-              <span class="skill-tag">Athena</span>
-              <span class="skill-tag">Kinesis</span>
-            </div>
-          </div>
-          <div class="skill-card reveal">
-            <div class="skill-card-icon">&#128187;</div>
-            <h3>Languages &amp; Frameworks</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">Python</span>
-              <span class="skill-tag">Go</span>
-              <span class="skill-tag">Java</span>
-              <span class="skill-tag">Spring Boot</span>
-              <span class="skill-tag">React JS</span>
-              <span class="skill-tag">HTML5</span>
-            </div>
-          </div>
-          <div class="skill-card reveal">
-            <div class="skill-card-icon">&#9881;</div>
-            <h3>DevOps &amp; IaC</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">Terraform</span>
-              <span class="skill-tag">Docker</span>
-              <span class="skill-tag">GitLab CI/CD</span>
-              <span class="skill-tag">Git</span>
-            </div>
-          </div>
-          <div class="skill-card reveal">
-            <div class="skill-card-icon">&#128450;</div>
-            <h3>Data &amp; Middleware</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">Oracle</span>
-              <span class="skill-tag">MySQL</span>
-              <span class="skill-tag">Aurora</span>
-              <span class="skill-tag">Hibernate/JPA</span>
-              <span class="skill-tag">MuleSoft</span>
-              <span class="skill-tag">IBM MQ</span>
-            </div>
-          </div>
-          <div class="skill-card reveal">
-            <div class="skill-card-icon">&#128274;</div>
-            <h3>Architecture</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">Solution Design</span>
-              <span class="skill-tag">Microservices</span>
-              <span class="skill-tag">REST APIs</span>
-              <span class="skill-tag">Multi-tenancy</span>
-              <span class="skill-tag">Agile/Scrum</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Career Section -->
-    <section class="section section-alt" id="career">
-      <div class="container">
-        <div class="section-header reveal">
-          <h2>Career</h2>
-          <div class="divider"></div>
+      <!-- Projects Section -->
+      <section class="section section-alt" id="projects">
+        <div class="container">
+          <div class="section-header reveal">
+            <h2>Key Projects</h2>
+            <div class="divider" aria-hidden="true"></div>
+          </div>
+          <div class="projects-grid">
+            <div class="project-card reveal">
+              <h3>CCDB Decoupling on AWS</h3>
+              <p class="project-client">Hallmark Cards</p>
+              <p class="project-desc">Mainframe-to-AWS modernisation of the Change of Address database processing system with event-driven architecture.</p>
+              <div class="skill-tags">
+                <span class="skill-tag">Go</span>
+                <span class="skill-tag">Lambda</span>
+                <span class="skill-tag">AWS Batch</span>
+                <span class="skill-tag">Athena</span>
+                <span class="skill-tag">EventBridge</span>
+                <span class="skill-tag">Terraform</span>
+              </div>
+            </div>
+            <div class="project-card reveal">
+              <h3>NCOA Batch Processing</h3>
+              <p class="project-client">Hallmark Cards</p>
+              <p class="project-desc">Migration of National Change of Address batch processing from Mainframe to serverless AWS architecture.</p>
+              <div class="skill-tags">
+                <span class="skill-tag">Go</span>
+                <span class="skill-tag">Lambda</span>
+                <span class="skill-tag">Aurora MySQL</span>
+                <span class="skill-tag">Terraform</span>
+                <span class="skill-tag">GitLab CI/CD</span>
+              </div>
+            </div>
+            <div class="project-card reveal">
+              <h3>MPPS 2.0 Modernisation</h3>
+              <p class="project-client">Hallmark Cards</p>
+              <p class="project-desc">Legacy application modernisation to a React-based SPA with cloud-native deployment on AWS.</p>
+              <div class="skill-tags">
+                <span class="skill-tag">React JS</span>
+                <span class="skill-tag">Redux</span>
+                <span class="skill-tag">AWS S3</span>
+                <span class="skill-tag">ECS</span>
+              </div>
+            </div>
+            <div class="project-card reveal">
+              <h3>Global Sales &amp; Servicing Platform</h3>
+              <p class="project-client">MetLife</p>
+              <p class="project-desc">Multi-tenant, multi-lingual enterprise JEE platform deployed across USA, China, Gulf, and Vietnam.</p>
+              <div class="skill-tags">
+                <span class="skill-tag">Java/JEE</span>
+                <span class="skill-tag">Spring</span>
+                <span class="skill-tag">Multi-tenancy</span>
+                <span class="skill-tag">i18n</span>
+              </div>
+            </div>
+            <div class="project-card reveal">
+              <h3>DMZ Segmentation &amp; RSA Remediation</h3>
+              <p class="project-client">Hallmark Cards</p>
+              <p class="project-desc">Enterprise security implementation with network segmentation, AES-256 encryption, and RSA-2048 on JBoss EAP.</p>
+              <div class="skill-tags">
+                <span class="skill-tag">PicketLink</span>
+                <span class="skill-tag">AES-256</span>
+                <span class="skill-tag">RSA-2048</span>
+                <span class="skill-tag">JBoss EAP</span>
+              </div>
+            </div>
+            <div class="project-card reveal">
+              <h3>MGE Sign &amp; Send APIs</h3>
+              <p class="project-client">Hallmark Cards</p>
+              <p class="project-desc">MuleSoft API layer for the digital greeting card platform on AnyPoint/CloudHub.</p>
+              <div class="skill-tags">
+                <span class="skill-tag">MuleSoft</span>
+                <span class="skill-tag">AnyPoint</span>
+                <span class="skill-tag">CloudHub</span>
+                <span class="skill-tag">REST APIs</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="career-list reveal">
-          <div class="career-item career-current">
-            <div class="career-dot"></div>
-            <div class="career-content">
-              <h4>Tata Consultancy Services (TCS)</h4>
-              <p class="career-role">Solution Architect</p>
-              <p class="career-meta">
-                Oct 2007 – Present &bull; Kolkata, India
-              </p>
-            </div>
-          </div>
-          <div class="career-item">
-            <div class="career-dot"></div>
-            <div class="career-content">
-              <h4>netGuru Ltd.</h4>
-              <p class="career-role">Software Developer</p>
-              <p class="career-meta">Jan 2006 – Oct 2007 &bull; Kolkata</p>
-            </div>
-          </div>
-          <div class="career-item">
-            <div class="career-dot"></div>
-            <div class="career-content">
-              <h4>Karshan Technologies</h4>
-              <p class="career-role">Consultant</p>
-              <p class="career-meta">Aug 2005 – Jan 2006 &bull; Kolkata</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Certifications Section -->
-    <section class="section" id="certifications">
-      <div class="container">
-        <div class="section-header reveal">
-          <h2>Certifications</h2>
-          <div class="divider"></div>
-        </div>
-        <div class="certs-grid">
-          <div class="cert-card reveal">
-            <div class="cert-icon">&#129302;</div>
-            <div class="cert-info">
-              <h4>Claude Certified Architect – Foundation (CCAR-F)</h4>
-            </div>
+      <!-- Career Section -->
+      <section class="section" id="career">
+        <div class="container">
+          <div class="section-header reveal">
+            <h2>Career</h2>
+            <div class="divider" aria-hidden="true"></div>
           </div>
-          <div class="cert-card reveal">
-            <div class="cert-icon">&#9729;</div>
-            <div class="cert-info">
-              <h4>AWS Solutions Architect – Associate</h4>
+          <div class="career-list reveal">
+            <div class="career-item career-current">
+              <div class="career-dot"></div>
+              <div class="career-content">
+                <h3>Tata Consultancy Services (TCS)</h3>
+                <p class="career-role">Solution Architect</p>
+                <p class="career-meta">
+                  Oct 2007 – Present &bull; Kolkata, India
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="cert-card reveal">
-            <div class="cert-icon">&#129302;</div>
-            <div class="cert-info">
-              <h4>AWS Certified AI Practitioner</h4>
+            <div class="career-item">
+              <div class="career-dot"></div>
+              <div class="career-content">
+                <h3>netGuru Ltd.</h3>
+                <p class="career-role">Software Developer</p>
+                <p class="career-meta">Jan 2006 – Oct 2007 &bull; Kolkata</p>
+              </div>
             </div>
-          </div>
-          <div class="cert-card reveal">
-            <div class="cert-icon">&#9729;</div>
-            <div class="cert-info">
-              <h4>Microsoft Azure Fundamentals</h4>
-            </div>
-          </div>
-          <div class="cert-card reveal">
-            <div class="cert-icon">&#9749;</div>
-            <div class="cert-info">
-              <h4>Oracle Certified Professional – Java 6</h4>
-            </div>
-          </div>
-          <div class="cert-card reveal">
-            <div class="cert-icon">&#128203;</div>
-            <div class="cert-info">
-              <h4>Professional Scrum Master I (PSM I)</h4>
+            <div class="career-item">
+              <div class="career-dot"></div>
+              <div class="career-content">
+                <h3>Karshan Technologies</h3>
+                <p class="career-role">Consultant</p>
+                <p class="career-meta">Aug 2005 – Jan 2006 &bull; Kolkata</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Education Section -->
-    <section class="section section-alt" id="education">
-      <div class="container">
-        <div class="section-header reveal">
-          <h2>Education</h2>
-          <div class="divider"></div>
-        </div>
-        <div class="education-grid">
-          <div class="edu-card reveal">
-            <span class="edu-year">2021</span>
-            <h4>ME in Software Engineering</h4>
-            <p>Jadavpur University, Kolkata</p>
+      <!-- Certifications Section -->
+      <section class="section section-alt" id="certifications">
+        <div class="container">
+          <div class="section-header reveal">
+            <h2>Certifications</h2>
+            <div class="divider" aria-hidden="true"></div>
           </div>
-          <div class="edu-card reveal">
-            <span class="edu-year">2004</span>
-            <h4>B.Tech in Information Technology</h4>
-            <p>RCC Institute of Information Technology, Kolkata</p>
+          <div class="certs-grid">
+            <div class="cert-card reveal">
+              <div class="cert-icon" aria-hidden="true">&#129302;</div>
+              <div class="cert-info">
+                <h3>Claude Certified Architect – Foundation (CCAR-F)</h3>
+              </div>
+            </div>
+            <div class="cert-card reveal">
+              <div class="cert-icon" aria-hidden="true">&#9729;</div>
+              <div class="cert-info">
+                <h3>AWS Solutions Architect – Associate</h3>
+              </div>
+            </div>
+            <div class="cert-card reveal">
+              <div class="cert-icon" aria-hidden="true">&#129302;</div>
+              <div class="cert-info">
+                <h3>AWS Certified AI Practitioner</h3>
+              </div>
+            </div>
+            <div class="cert-card reveal">
+              <div class="cert-icon" aria-hidden="true">&#9729;</div>
+              <div class="cert-info">
+                <h3>Microsoft Azure Fundamentals</h3>
+              </div>
+            </div>
+            <div class="cert-card reveal">
+              <div class="cert-icon" aria-hidden="true">&#9749;</div>
+              <div class="cert-info">
+                <h3>Oracle Certified Professional – Java 6</h3>
+              </div>
+            </div>
+            <div class="cert-card reveal">
+              <div class="cert-icon" aria-hidden="true">&#128203;</div>
+              <div class="cert-info">
+                <h3>Professional Scrum Master I (PSM I)</h3>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Contact Section -->
-    <section class="section" id="contact">
-      <div class="container">
-        <div class="section-header reveal">
-          <h2>Get in Touch</h2>
-          <div class="divider"></div>
-        </div>
-        <div class="contact-content reveal">
-          <div class="contact-links">
-            <a href="mailto:career.basir81@gmail.com" class="contact-link">
-              <span class="link-icon">&#9993;</span>
-              <span>career.basir81@gmail.com</span>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/basir-ahmed"
-              target="_blank"
-              rel="noopener"
-              class="contact-link"
-            >
-              <span class="link-icon">in</span>
-              <span>LinkedIn</span>
-            </a>
-            <a href="tel:+919836835357" class="contact-link">
-              <span class="link-icon">&#128222;</span>
-              <span>+91 9836835357</span>
-            </a>
+      <!-- Education Section -->
+      <section class="section" id="education">
+        <div class="container">
+          <div class="section-header reveal">
+            <h2>Education</h2>
+            <div class="divider" aria-hidden="true"></div>
+          </div>
+          <div class="education-grid">
+            <div class="edu-card reveal">
+              <span class="edu-year">2021</span>
+              <h3>ME in Software Engineering</h3>
+              <p>Jadavpur University, Kolkata</p>
+            </div>
+            <div class="edu-card reveal">
+              <span class="edu-year">2004</span>
+              <h3>B.Tech in Information Technology</h3>
+              <p>RCC Institute of Information Technology, Kolkata</p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="section section-alt" id="contact">
+        <div class="container">
+          <div class="section-header reveal">
+            <h2>Get in Touch</h2>
+            <div class="divider" aria-hidden="true"></div>
+          </div>
+          <div class="contact-content reveal">
+            <div class="contact-links">
+              <a href="mailto:career.basir81@gmail.com" class="contact-link">
+                <span class="link-icon" aria-hidden="true">&#9993;</span>
+                <span>career.basir81@gmail.com</span>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/basir-ahmed"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-link"
+              >
+                <span class="link-icon" aria-hidden="true">in</span>
+                <span>LinkedIn</span>
+              </a>
+              <a href="tel:+919836835357" class="contact-link">
+                <span class="link-icon" aria-hidden="true">&#128222;</span>
+                <span>+91 9836835357</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
-      <p>&copy; 2025 Basir Ahmed &bull; Kolkata, India</p>
+      <p>&copy; <span id="currentYear"></span> Basir Ahmed &bull; Kolkata, India</p>
     </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">&#8593;</button>
 
     <script src="./js/main.js"></script>
   </body>
