@@ -72,7 +72,7 @@ Sections not yet added: **Testimonials/Recommendations**.
 
 ### Contact
 
-- **Email:** career.basir81@gmail.com
+- **Email:** mail2basir@gmail.com
 - **Mobile:** +91 9836835357
 - **LinkedIn:** https://www.linkedin.com/in/basir-ahmed
 - **Photo:** `images/profile_photo.jpeg`
