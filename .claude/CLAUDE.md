@@ -14,7 +14,16 @@ css/styles.css          — All styles (CSS custom properties, responsive, dark/
 js/main.js              — Theme toggle, mobile menu, navbar scroll, scroll-reveal, active nav, back-to-top
 images/profile_photo.jpeg — Profile photo
 images/favicon.svg      — SVG favicon (initials "BA" in brand blue)
+images/apple-touch-icon.png — Apple touch icon for PWA
 images/og-image.svg     — Open Graph social card template (needs PNG conversion for production)
+images/certs/           — Certification badge images (PNG/SVG per cert)
+  badge-anthropic-ccar.png
+  badge-aws-sa-associate.png
+  badge-oci-genai.png
+  badge-aws-ai-practitioner.png
+  badge-azure-fundamentals.svg
+  badge-oracle-java-ocp.png
+  badge-scrum-psm1.png
 404.html                — Custom 404 error page
 manifest.json           — PWA manifest
 data/CV_Basir_Ahmed.pdf — Resume PDF (git-ignored; not linked in the site)
@@ -45,14 +54,17 @@ Then visit `http://localhost:8080`.
 
 ## Current Site Sections
 
-1. **Hero** — photo, name, tagline ("Applied AI Architect & AWS Solution Architect"), summary, badge pills, CTA buttons (Get in Touch, LinkedIn)
-2. **Skills** — 6 cards: AI Architecture & Agentic AI, AWS Cloud, Languages & Frameworks, DevOps & IaC, Data & Middleware, Architecture
-3. **Projects** — 6 project cards with title, client, description, and tech tags
-4. **Career** — vertical timeline (TCS, netGuru, Karshan)
-5. **Certifications** — grid of cert cards (Claude Certified Architect CCAR-F, AWS SA, AWS AI Practitioner, Azure Fundamentals, OCJP, PSM I)
-6. **Education** — two cards (ME Jadavpur University, B.Tech RCCIT)
-7. **Contact** — email, LinkedIn, phone
-8. **Back-to-top** — fixed button appears after 300px scroll
+1. **Hero** — photo, name, tagline ("Applied AI Architect & AWS Solution Architect"), summary, hero-stats row (21 yrs experience / 18+ yrs at TCS / 7 certifications), badge pills, CTA buttons (Get in Touch, LinkedIn)
+2. **AI Focus Areas** (`#ai-focus`) — 4 cards: Agentic AI Systems, RAG Pipelines, LLM Solution Design, Cloud-Native AI on AWS
+3. **Skills** (`#skills`, heading "Technical Expertise") — 6 cards: AI Architecture & Agentic AI, AWS Cloud, Languages & Frameworks, DevOps & IaC, Data & Middleware, Architecture
+4. **Career** (`#career`) — role-progression list with TCS sub-roles (Applied AI Architect 2025–Present, AWS Solution Architect 2021–2025, Solution Architect 2017–2021, JEE Technical Architect 2013–2017, Technical Lead / Developer 2007–2013), netGuru, Karshan
+5. **Certifications** (`#certifications`) — 7 badge-image cards: Claude Certified Architect CCAR-F, AWS SA Associate, OCI Generative AI Professional, AWS AI Practitioner, Azure Fundamentals, Oracle Java OCP, PSM I
+6. **Awards** (`#awards`) — 3 award cards: Star Team Performer (2018), Best Team Performer (2008/2011/2017/2018), On the Spot Award (2008)
+7. **Education** (`#education`) — two cards (ME Jadavpur University, B.Tech RCCIT)
+8. **Contact** (`#contact`) — email, LinkedIn, phone
+9. **Back-to-top** — fixed button appears after 300px scroll
+
+Sections not yet added: **Testimonials/Recommendations**.
 
 ---
 
@@ -90,6 +102,7 @@ Then visit `http://localhost:8080`.
 
 - Claude Certified Architect – Foundation (CCAR-F)
 - AWS Certified Solutions Architect – Associate (score 834)
+- Oracle Cloud Infrastructure Generative AI Professional
 - AWS Certified AI Practitioner (score 776)
 - Microsoft Azure Fundamentals (score 820)
 - Oracle Certified Professional Java 6 Programmer – OCJP (score 98%)
@@ -141,8 +154,8 @@ Then visit `http://localhost:8080`.
 ## Website Design Goals
 
 - **Dark / light mode toggle** — CSS custom properties switched by `data-theme` on `<html>`. Default to system preference, manual toggle persists to localStorage.
-- Sections currently implemented: **Hero**, **Skills**, **Projects**, **Career**, **Certifications**, **Education**, **Contact**.
-- Sections not yet added: **Awards**, **Testimonials/Recommendations**.
+- Sections currently implemented: **Hero**, **AI Focus Areas**, **Skills**, **Career**, **Certifications**, **Awards**, **Education**, **Contact**.
+- Sections not yet added: **Testimonials/Recommendations**.
 - Photo at `./images/profile_photo.jpeg`, CV at `./data/CV_Basir_Ahmed.pdf` (git-ignored, not served).
 - Smooth scroll, scroll-reveal animations, responsive (mobile-first with breakpoints at 480px and 900px).
 - Font: Inter (Google Fonts CDN).
